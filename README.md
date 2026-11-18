@@ -14,7 +14,7 @@ Spec and designs: [YuProof-ClaudeCode-Handoff/](YuProof-ClaudeCode-Handoff/) (`Y
 
 | Milestone | Status |
 |---|---|
-| 1. Contracts | Done: 47 tests passing. Amoy deploy waiting for a funded deployer wallet |
+| 1. Contracts | Done: 47 tests passing, deployed to Polygon Amoy (below) |
 | 2. Verify | Done locally: home, scan, checking, 4 result screens, verify API, PDF proof report, share links, report form |
 
 ## Run locally (milestone 2 end to end)
@@ -34,6 +34,15 @@ npm run e2e                       # optional: browser smoke test (Chrome), scree
 Upload the PDFs in `web/samples/` to see each result (genuine, tampered, cancelled, not found), or open
 `/v/YP-2026-004213`, `/v/YP-2026-004214`, `/s/demo-share-ananya`. Restarting the local chain wipes it: run `npm run seed` again
 (with the dev server stopped, because embedded PGlite allows one process).
+
+## Polygon Amoy deployment (testnet)
+
+| Contract | Address |
+|---|---|
+| IssuerRegistry | [0x9FDaF078B7A9A0c8A430eEce6700AeaDc1Fa2DCE](https://amoy.polygonscan.com/address/0x9FDaF078B7A9A0c8A430eEce6700AeaDc1Fa2DCE) |
+| DocumentRegistry | [0xF25CaB7Ac589b9483D76b1bd4f41EF3cB4994F23](https://amoy.polygonscan.com/address/0xF25CaB7Ac589b9483D76b1bd4f41EF3cB4994F23) |
+
+Admin / deployer (testnet only): 0x862BB17F8A43E74FBc0E37cBd5FC6B7199ec8454
 
 ## Deploy contracts to Polygon Amoy
 

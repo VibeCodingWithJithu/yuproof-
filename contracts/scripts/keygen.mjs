@@ -12,7 +12,7 @@ if (/^AMOY_PRIVATE_KEY=0x[0-9a-fA-F]{64}/m.test(env)) {
 }
 const w = Wallet.createRandom();
 const lines = env.split(/\r?\n/).filter((l) => l && !l.startsWith("AMOY_PRIVATE_KEY="));
-if (!lines.some((l) => l.startsWith("AMOY_RPC_URL="))) lines.push("AMOY_RPC_URL=https://rpc-amoy.polygon.technology");
+if (!lines.some((l) => l.startsWith("AMOY_RPC_URL="))) lines.push("AMOY_RPC_URL=https://polygon-amoy-bor-rpc.publicnode.com");
 lines.push(`AMOY_PRIVATE_KEY=${w.privateKey}`);
 writeFileSync(path, lines.join("\n") + "\n");
 console.log("New Amoy deployer address:", w.address);
