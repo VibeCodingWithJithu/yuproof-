@@ -1,0 +1,278 @@
+@import "tailwindcss";
+
+/* YuProof design tokens — YUPROOF_SPEC.md §1 */
+@theme {
+  --color-blue: #2b3990;
+  --color-blue-soft: #e8ebf8;
+  --color-blue-on-blue: #3e4da6;
+  --color-guilloche: #3a49a8;
+  --color-green: #0e9f6e;
+  --color-green-bg: #e3f6ee;
+  --color-green-text: #065f46;
+  --color-red: #b42318;
+  --color-red-bg: #fdecec;
+  --color-red-text: #912018;
+  --color-red-header: #8e1b13;
+  --color-amber: #b45309;
+  --color-amber-bg: #fff1d6;
+  --color-amber-text: #7c4a03;
+  --color-amber-header: #8a4b08;
+  --color-grey-header: #3d4560;
+  --color-navy: #141a3d;
+  --color-muted: #4a5368;
+  --color-border: #e4e8f3;
+  --color-input: #c9d0e3;
+  --color-mist: #f3f5fb;
+  --color-cream: #fbf8f1;
+
+  --font-sans: var(--font-jakarta), system-ui, sans-serif;
+  --font-serif: var(--font-fraunces), Georgia, serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, monospace;
+}
+
+html,
+body {
+  margin: 0;
+  background: var(--color-mist);
+  color: var(--color-navy);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--color-blue);
+}
+a:hover {
+  color: var(--color-navy);
+}
+
+/* ---- Shared classes ported 1:1 from screens/html ---- */
+.serif {
+  font-family: var(--font-serif);
+  font-weight: 600;
+}
+.mono {
+  font-family: var(--font-mono);
+}
+.btn {
+  height: 48px;
+  padding: 0 18px;
+  border-radius: 14px;
+  font: inherit;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  white-space: nowrap;
+}
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.btn:focus-visible,
+.inp:focus-visible,
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #9fb0ff;
+  outline-offset: 2px;
+}
+.btn-p {
+  background: var(--color-blue);
+  color: #fff;
+}
+.btn-p:hover {
+  color: #fff;
+  background: #24307a;
+}
+.btn-s {
+  background: #fff;
+  color: var(--color-navy);
+  border: 1.5px solid var(--color-input);
+}
+.btn-d {
+  background: var(--color-red);
+  color: #fff;
+}
+.btn-d:hover {
+  color: #fff;
+}
+.btn-w {
+  background: #fff;
+  color: var(--color-blue);
+}
+.btn-sm {
+  height: 38px;
+  padding: 0 14px;
+  font-size: 14px;
+  border-radius: 10px;
+}
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.lbl {
+  margin: 0;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+.muted {
+  color: var(--color-muted);
+}
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.inp {
+  height: 46px;
+  box-sizing: border-box;
+  padding: 0 14px;
+  border: 1px solid var(--color-input);
+  border-radius: 12px;
+  font: inherit;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--color-navy);
+  background: #fff;
+  width: 100%;
+  min-width: 0;
+}
+textarea.inp {
+  height: auto;
+  padding: 12px 14px;
+  resize: vertical;
+}
+.sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* ---- Phone layout (public verify is phone-first) ---- */
+.phone {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  min-height: 100dvh;
+  margin: 0 auto;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  background: var(--color-mist);
+  display: flex;
+  flex-direction: column;
+}
+.hero {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0 0 36px 36px;
+  padding: 18px 20px 78px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  color: #fff;
+}
+.guilloche {
+  position: absolute;
+  left: 50%;
+  top: -40px;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+.overlap {
+  position: relative;
+  margin: -56px 16px 0;
+  border-radius: 20px;
+  background: var(--color-cream);
+  color: #1b1f33;
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(20, 26, 61, 0.14);
+}
+.strip {
+  height: 6px;
+  background: repeating-linear-gradient(90deg, #2b3990 0 18px, #0e9f6e 18px 36px, #b8892e 36px 54px);
+}
+.bottom-bar {
+  margin-top: auto;
+  position: sticky;
+  bottom: 0;
+  padding: 14px 16px calc(22px + env(safe-area-inset-bottom));
+  background: #fff;
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  gap: 10px;
+  z-index: 5;
+}
+.hero-pill {
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 999px;
+  color: #fff;
+}
+.hero-pill:hover {
+  color: #fff;
+}
+.hero-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 11px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
+}
+
+@keyframes yp-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.spin {
+  animation: yp-spin 0.9s linear infinite;
+}
+@keyframes yp-scan {
+  0%,
+  100% {
+    transform: translateY(-90px);
+  }
+  50% {
+    transform: translateY(90px);
+  }
+}
+.scanline {
+  animation: yp-scan 2.4s ease-in-out infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .spin,
+  .scanline {
+    animation: none;
+  }
+}

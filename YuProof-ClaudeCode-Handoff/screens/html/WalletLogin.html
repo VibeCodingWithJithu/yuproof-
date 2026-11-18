@@ -1,0 +1,36 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>1 · Login</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&amp;family=JetBrains+Mono:wght@500;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#2B3990}a:hover{color:#141A3D}
+.serif{font-family:Fraunces,Georgia,serif;font-weight:600}
+.mono{font-family:'JetBrains Mono',monospace}
+.btn{height:48px;padding:0 18px;border-radius:14px;font:inherit;font-size:15px;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;text-decoration:none;box-sizing:border-box;white-space:nowrap}
+.btn-p{background:#2B3990;color:#FFFFFF}
+.btn-s{background:#FFFFFF;color:#141A3D;border:1.5px solid #C9D0E3}
+.btn-d{background:#B42318;color:#FFFFFF}
+.btn-w{background:#FFFFFF;color:#2B3990}
+.btn-sm{height:38px;padding:0 14px;font-size:14px;border-radius:10px}
+.chip{display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border-radius:999px;font-size:12px;font-weight:700;white-space:nowrap}
+.ok{background:#E3F6EE;color:#065F46}
+.bad{background:#FDECEC;color:#912018}
+.warn{background:#FFF1D6;color:#7C4A03}
+.mute{background:#EEF1F7;color:#3D4560}
+.info{background:#E8EBF8;color:#2B3990}
+.card{background:#FFFFFF;border-radius:18px;padding:20px;box-sizing:border-box}
+.lbl{margin:0;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#4A5368}
+.muted{color:#4A5368}
+.field{display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:600}
+.inp{height:46px;box-sizing:border-box;padding:0 14px;border:1px solid #C9D0E3;border-radius:12px;font:inherit;font-size:15px;font-weight:500;color:#141A3D;background:#FFFFFF;width:100%}
+.tbl{width:100%;border-collapse:collapse;font-size:14px}
+.tbl th{text-align:left;font-weight:600;color:#4A5368;padding:10px 12px;border-bottom:1px solid #E4E8F3;white-space:nowrap}
+.tbl td{padding:12px;border-bottom:1px solid #EEF1F7;vertical-align:middle}
+.nav-a{display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:10px;color:#C9D2FF;font-size:14px;font-weight:600;text-decoration:none}
+.nav-a:hover{color:#FFFFFF}
+.nav-on{background:#2B3990;color:#FFFFFF}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+</style>
+</head><body>
+
+<div style="position:relative;width:390px;height:844px;box-sizing:border-box;overflow:hidden;background:#F3F5FB;font-family:'Plus Jakarta Sans',system-ui,sans-serif;color:#141A3D;display:flex;flex-direction:column"><section style="position:relative;overflow:hidden;background:#2B3990;border-radius:0 0 32px 32px;padding:18px 20px 30px;display:flex;flex-direction:column;gap:18px"><svg width="390" height="420" viewBox="0 0 390 420" aria-hidden="true" style="position:absolute;left:0;top:-40px"><g fill="none" stroke="#3A49A8" stroke-width="1"><circle cx="195" cy="240" r="90"/><circle cx="195" cy="240" r="112"/><circle cx="195" cy="240" r="134"/><circle cx="195" cy="240" r="156"/><circle cx="195" cy="240" r="178"/><circle cx="195" cy="240" r="200"/><circle cx="195" cy="240" r="222"/></g></svg><div style="position:relative;display:flex;flex-direction:column;gap:18px"><img src="../brand/yuproof-logo-horizontal-white.svg" alt="YuProof" style="height:30px;width:auto;align-self:flex-start"><div style="display:flex;flex-direction:column;gap:10px;padding:40px 0 30px"><h1 class="serif" style="margin:0;font-size:36px;line-height:1.08;color:#FFFFFF">All your verified documents, in one wallet</h1><p style="margin:0;font-size:15px;line-height:1.5;color:#DDE2F5">Degrees, mark sheets and experience letters from your college and employers. Free, forever.</p></div></div></section><main style="flex-grow:1;display:flex;flex-direction:column;gap:16px;padding:24px 20px"><div class="field"><label for="ph">Mobile number</label><div style="display:flex;gap:8px"><span class="inp" style="width:72px;flex-shrink:0;display:flex;align-items:center;justify-content:center">+91</span><input id="ph" class="inp" type="tel" placeholder="98765 43210" value="98765 43210"></div><p class="muted" style="margin:0;font-size:13px;font-weight:500">Use the number you gave your college or employer.</p></div><a href="WalletOTP.html" class="btn btn-p" style="height:52px;font-size:16px">Send OTP</a><div style="display:flex;align-items:center;gap:12px;font-size:13px" class="muted"><span style="flex-grow:1;height:1px;background:#D5DAEA"></span>or<span style="flex-grow:1;height:1px;background:#D5DAEA"></span></div><a href="WalletOTP.html" class="btn btn-s" style="height:52px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink:0"><path d="M3 5h18v14H3zM3 6l9 7 9-7"/></svg>Continue with email</a><p class="muted" style="margin:auto 0 0;text-align:center;font-size:12px;line-height:1.5"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink:0"><path d="M5 11h14v10H5zM8 11V7a4 4 0 0 1 8 0v4"/></svg> Your data is stored in India and shared only when you choose.<br>By continuing you agree to the <a href="#terms">Terms</a> and <a href="#privacy">Privacy policy</a>.</p></main></div>
+</body></html>

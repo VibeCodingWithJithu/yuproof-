@@ -1,0 +1,32 @@
+{
+  "name": "@yuproof/contracts",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "YuProof smart contracts: IssuerRegistry and DocumentRegistry (Polygon)",
+  "scripts": {
+    "build": "hardhat build",
+    "test": "hardhat test",
+    "deploy:local": "hardhat ignition deploy ignition/modules/YuProof.ts",
+    "deploy:amoy": "hardhat ignition deploy ignition/modules/YuProof.ts --network amoy",
+    "keygen": "node scripts/keygen.mjs",
+    "balance:amoy": "hardhat run scripts/balance.ts --network amoy",
+    "export-abi": "hardhat build && node scripts/export-abi.mjs",
+    "node": "hardhat node",
+    "deploy:localhost": "hardhat ignition deploy ignition/modules/YuProof.ts --network localhost"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox-mocha-ethers": "^4.0.0",
+    "@openzeppelin/contracts": "^5.6.1",
+    "@openzeppelin/merkle-tree": "^1.0.8",
+    "@types/chai": "^5.2.3",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^26.6.6",
+    "chai": "^6.3.0",
+    "dotenv": "^18.0.10",
+    "ethers": "^6.17.0",
+    "hardhat": "^3.22.0",
+    "mocha": "^12.0.3",
+    "typescript": "^7.0.2"
+  }
+}
